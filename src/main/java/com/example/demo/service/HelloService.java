@@ -11,4 +11,5 @@ public interface HelloService {
     public UserInfo testUser(String username);
 
     public int insertUser(String username,String password);//新增的接口
+    public int updatetUser(String username,String id);//更新的接口
 }

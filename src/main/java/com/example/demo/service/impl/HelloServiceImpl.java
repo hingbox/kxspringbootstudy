@@ -27,6 +27,11 @@ public class HelloServiceImpl implements HelloService {
     }
 
     @Override
+    public int updatetUser(String username, String id) {
+        return helloDao.update(username,id);
+    }
+
+    @Override
     public int insertUser(String username, String password) {
         return helloDao.insert(username,password);
     }
