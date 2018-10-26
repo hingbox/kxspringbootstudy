@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 
@@ -63,6 +64,16 @@ public class HelloWordController {
         String username = userInfo.getUsername();
         helloService.updatetUser(username,id);
         return result;
+    }
+
+    @RequestMapping("/v")
+    public ModelAndView index(){
+        return new ModelAndView("index");
+    }
+
+    @RequestMapping("/home")
+    public ModelAndView home(){
+        return new ModelAndView("dist/home");
     }
 
 }
